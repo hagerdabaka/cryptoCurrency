@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+#toolbar{
+    background-color: #009688 !important;
+
+    .tiltle{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: .1em;
+        background: -webkit-linear-gradient(#ff2770,#abe6e0,#ffff,#ffff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        .yt{
+
+            font-family: 'Lobster Two', cursive;
+            font-weight: 700;
+        }
+    }
+    
+    .select{
+        text-align: center;
+        justify-content: center;
+        margin-top: 1.5%;
+        width: 100px !important;
+        padding-top: 5px !important;
+        
+        border-radius: 10px !important;
+
+
+    }
+
+@media (max-width:400px) {
+    font-size: 60% !important;
+    .select{
+        font-size: 60% !important;
+    }
+}
+
+}
+
+@media (max-width:420px) {
+    
+    .tiltle{
+        display: none;
+    }
+    .tiltle2{
+        font-family: 'Lobster Two', cursive;
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 0.06em;
+        background: -webkit-linear-gradient(#ff2770,#76ddd3,#ffff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (min-width:420px) {
+    
+    .tiltle2{
+        display: none;
+    }
+
+}
+
+:host ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+}

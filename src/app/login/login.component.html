@@ -1,0 +1,29 @@
+<a class='return m-5' routerLink="/coin-list">
+    <i class="fa-solid fa-arrow-left"  style="font-size: 40px; font-weight: bolder;"></i>
+</a>
+<div class="all ">
+    <div class="box">
+        <span class="borderline"></span>
+        <form>
+            <h2>Sign in</h2>
+            <!-- <div class="inputBox">
+                <input type="text" required>
+                <span>Username</span>
+                <i></i>
+            </div> -->
+            <div class="form__group field inputBox">
+                <input type="text" class="form__field" placeholder="Name" name="name" id='name' required />
+                <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="form__group field inputBox">
+                <input type="password" class="form__field" placeholder="Password" name="password" id='password' required />
+                <label for="password" class="form__label">Password</label>
+            </div>
+            <div class="links">
+                <a href="#"> Forget password ?</a>
+                <a href="#"> Sign up</a>
+            </div>
+            <input type="submit" value="Login" id="login" routerLink="/">
+        </form>
+    </div>
+</div>

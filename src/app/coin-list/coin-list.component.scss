@@ -1,0 +1,140 @@
+.header {
+    height: 40%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 5%;
+    h2 {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 3.75rem;
+        line-height: 1.2;
+        letter-spacing: 0.2rem;
+        
+    }
+    h6 {
+        color: darkgray;
+        text-transform: capitalize;
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.57;
+        letter-spacing: 0.00714em;
+    }
+
+    @media (max-width:800px) {
+        h2 {
+            font-size: 2rem;
+        }
+        h6{
+            margin-bottom: 5% !important;
+        }
+    }
+}
+
+.banner {
+    background-image: url('../../assets/banner2.jpg');
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.sub-header {
+     height: 50%;
+    display: block;
+    align-items: center;
+}
+
+.card {
+    text-align: center;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    width: auto;
+    height: 200px;
+    margin-right: 10px !important;
+    position: relative;
+    img {
+        width: 70px;
+        margin: 0 auto;
+    }
+    h5 {
+        font-weight: 500;
+    }
+    p {
+        font-weight: 600;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+tr{
+    background-color: rgb(36, 37, 37) !important;
+}
+td {
+    width: 25%;
+    cursor: pointer;
+    background-color: rgba(36, 37, 37, 0.87) !important;
+    color: #fff;
+}
+th{
+    width: 25%;
+    cursor: pointer;
+    background-color: #009688;
+}
+td:hover{
+    color: #009688;
+}
+
+:host ::ng-deep .mat-sort-header-content {
+    color: #fff;
+}
+
+:host ::ng-deep .mat-mdc-row{
+    background-color: rgb(36, 37, 37) !important;
+
+}
+:host ::ng-deep .mat-paginator-outer-container {
+    background-color: rgb(36, 37, 37) !important;
+}
+
+:host ::ng-deep tr.mat-header-row {
+    background-color: #009688 !important;
+}
+:host ::ng-deep  .mdc-data-table__row {
+    background-color: rgb(36, 37, 37) !important;
+}
+:host ::ng-deep tr.mat-row {
+    height: 70px;
+    background-color: rgb(36, 37, 37) !important;
+
+}
+.example-full-width{
+    width: 100%;
+    background-color: #212529 !important;
+
+}
+
+@media (max-width:550px) {
+    .finalcol{
+        display: none;
+    }
+    #table{
+        width: 100%  !important;
+        font-size: small;
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+}
+
+:host ::ng-deep tr{
+    background-color: #212529 !important;
+
+}

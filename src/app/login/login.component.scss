@@ -1,0 +1,224 @@
+$primary: #11998e;
+$secondary: #ff2770;
+$white: #fff;
+$gray: #9b9b9b;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  position: relative;
+  width: 318px;
+  height: 420px;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 310px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: a 6s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 310px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: a 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.borderline {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderline::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 310px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: a 6s linear infinite;
+  animation-delay: -1.5s;
+}
+.borderline::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: a 6s linear infinite;
+  animation-delay: -4.5s;
+}
+@keyframes a {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box form {
+  position: absolute;
+  inset: 4px;
+  background: #222;
+  padding: 50px 40px;
+  z-index: 2;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.box form .inputBox {
+  position: relative;
+  margin-top: 30px;
+  width: 250px;
+}
+
+.box form .links {
+  display: flex;
+  justify-content: space-between;
+}
+.box form .links a {
+  margin: 10px;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+  color: #fff;
+}
+
+// .box form input[type="submit"]
+#login {
+  border: none;
+  outline: none;
+  padding: 9px 24px;
+  background: #e9e9e9;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 10px;
+  color: #222;
+}
+#login:hover {
+  background: linear-gradient(to right, $primary, $secondary) !important;
+  color: #fff;
+}
+.box form input[type="submit"]:active {
+  opacity: 0.8;
+  background-color: linear-gradient(to right, $primary, $secondary) !important;
+}
+
+@media (max-width: 550px) {
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: #1c1c1c ;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: #1c1c1c;
+  }
+  .form__field:visited{
+    background-color: #1c1c1c !important;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+    background-color: #25252550;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
